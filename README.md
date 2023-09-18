@@ -2,7 +2,7 @@
 
 ## Symantic Versioning :mage:
 
-This project is going utilize semantic versioning for its tagging. [semver.org](https:ssh kjain53@emver.org/)
+This project is going utilize semantic versioning for its tagging. [semver.org](https://semver.org/)
 
 The general format:
 - **MAJOR.MINOR.PATCH**, eg. 1.0.1
