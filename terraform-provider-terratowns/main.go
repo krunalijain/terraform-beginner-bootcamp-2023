@@ -184,7 +184,6 @@ func resourceHouseCreate(ctx context.Context, d *schema.ResourceData, m interfac
 
 	log.Print("resourceHouseCreate:end")
 
-	return diags
 }
 
 func resourceHouseRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
@@ -231,9 +230,7 @@ func resourceHouseRead(ctx context.Context, d *schema.ResourceData, m interface{
 	} else if resp.StatusCode != http.StatusOK {
 		return diag.FromErr(fmt.Errorf("failed to read home resource, status_code: %d, status: %s, body %s", resp.StatusCode, resp.Status, responseData))
 	}
-
 	log.Print("resourceHouseRead:end")
-
 	return diags
 }
 
@@ -324,5 +321,6 @@ func resourceHouseDelete(ctx context.Context, d *schema.ResourceData, m interfac
 	d.SetId("")
 
 	log.Print("resourceHouseDelete:end")
+
 	return diags
 }
