@@ -7,14 +7,14 @@ terraform {
   }
   #backend "remote" {
   #  hostname = "app.terraform.io"
-  #  organization = "ExamPro"
+  #  organization = "TF-Bootcamp-2023"
 
   #  workspaces {
   #    name = "terra-house-1"
   #  }
   #}
   #cloud {
-  #  organization = "ExamPro"
+  #  organization = "TF-Bootcamp-2023"
   #  workspaces {
   #    name = "terra-house-1"
   #  }
@@ -28,24 +28,45 @@ provider "terratowns" {
   token = var.terratowns_access_token
 }
 
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+module "home_minimilitia_hosting" {
+  source = "./modules/terrahome_aws"
   user_uuid = var.teacherseat_user_uuid
-  index_html_filepath = var.index_html_filepath
-  error_html_filepath = var.error_html_filepath
-  content_version = var.content_version
-  assets_path = var.assets_path
+  public_path = var.minimilitia.public_path
+  content_version = var.minimilitia.content_version
 }
 
 resource "terratowns_home" "home" {
-  name = "How to play Arcanum in 2023!"
+  name = "Mini Militia, also known as Doodle Army 2 "
   description = <<DESCRIPTION
-Arcanum is a game from 2001 that shipped with alot of bugs.
-Modders have removed all the originals making this game really fun
-to play (despite that old look graphics). This is my guide that will
-show you how to play arcanum without spoiling the plot.
+Mini Militia, also known as Doodle Army 2, is a popular mobile and online multiplayer game known for 
+its intense action and fast-paced gameplay. Developed by Appsomniacs LLC, the game offers a unique 
+blend of 2D graphics and a variety of weapons, making it accessible and exciting for players of all ages. 
+Players can engage in team-based battles or free-for-all combat, using customizable avatars and characters. 
+With simple controls and the ability to connect with friends for multiplayer matches, 
+Mini Militia has garnered a large and dedicated fan base, offering hours of entertaining gaming experiences.
 DESCRIPTION
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.home_minimilitia_hosting.domain_name
   town = "missingo"
-  content_version = 1
+  content_version = var.minimilitia.content_version
+}
+
+module "home_suttarphini_hosting" {
+  source = "./modules/terrahome_aws"
+  user_uuid = var.teacherseat_user_uuid
+  public_path = var.suttarphini.public_path
+  content_version = var.suttarphini.content_version
+}
+
+resource "terratowns_home" "home_suttarphini" {
+  name = "Suttarphini - Queen of sweets in Rajasthan"
+  description = <<DESCRIPTION
+Suttarphini, known as the "Queen of Sweets" in Rajasthan, 
+is a delectable treat celebrated for its rich flavor and unique ingredients. 
+This handcrafted dessert blends the creaminess of mawa with the crunch of nuts, creating an exquisite texture. 
+Its long shelf life makes it an ideal gift for special occasions, 
+and it serves as a symbol of regional pride and cultural heritage, enhancing celebrations across the state.
+DESCRIPTION
+  domain_name = module.home_suttarphini_hosting.domain_name
+  town = "missingo"
+  content_version = var.suttarphini.content_version
 }
