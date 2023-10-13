@@ -282,3 +282,30 @@ For each allows us to enumerate over complex data types
 This is mostly useful when you are creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code.
 
 [For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
+
+## ETag 
+
+We use ETag when we want the TF to adapt any content change in any file. 
+For eg: When we don't use ETag - we changed some content of file and re-applied but it didn't take any new changes.
+When we use ETag - It will notice any content changed is there or not and will adapt that as well.
+			
+In Short: If the content changes then the ETag will change. ETag is unique
+We generate ETag by using `filemd5` (it's a function, a cryptographic algorithm which turns the contents of the file into an ETag)
+
+## ETag Vs Lifecycle
+
+As I understand it...the etag tells terraform IF the file has changed (as the hash will be different), the lifecycle tells terraform WHAT to do WHEN the file is changed. We moved away from relying strictly on the etag just so it wouldn't trigger a refresh everytime we changed that file. We moved that functionality to the version number so we could manually control when a refresh occurred.
+
+## Snapshots of this week
+
+### 1.4.0 in S3 uploaded error and index file
+
+![](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/assets/1.4.0%20in%20S3%20uploaded%20error%20and%20index%20file.png)
+
+### 1.6.0 part 2 applied changed version
+
+![](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/assets/1.6.0%20part%202%20applied%20changed%20version.JPG)
+
+### 1.8.0 result index.html page with img
+
+![](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/assets/1.8.0%20result%20index.html%20page%20with%20img.JPG)
