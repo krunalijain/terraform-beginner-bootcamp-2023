@@ -1,5 +1,21 @@
 # Terraform Beginner Bootcamp 2023 - Week 2
 
+## TOC - Table Of Contents
+- [Terraform Beginner Bootcamp 2023 - Week 2](#terraform-beginner-bootcamp-2023---week-2)
+  * [Working with Ruby](#working-with-ruby)
+    + [Bundler](#bundler)
+      - [Install Gems](#install-gems)
+      - [Executing ruby scripts in the context of bundler](#executing-ruby-scripts-in-the-context-of-bundler)
+    + [Sinatra](#sinatra)
+  * [Terratowns Mock Server](#terratowns-mock-server)
+    + [Running the web server](#running-the-web-server)
+  * [CRUD](#crud)
+  * [Error Faced](#error-faced)
+  * [End Results of Two Towns](#end-results-of-two-towns)
+    + [Gamers Grotto](#gamers-grotto)
+    + [Cooker Cove](#cooker-cove)
+
+
 ## Working with Ruby
 
 ### Bundler
@@ -62,7 +78,7 @@ CRUD stands for Create, Read Update, and Delete
 
 https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
 
-## Error Faced: required token not found
+## Error Faced
 
 ![](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/assets/Error%20-%20required%20token%20not%20found.JPG)
 
@@ -80,7 +96,7 @@ The code block from `main.tf` file I commentted off:
 
 ## End Results of Two Towns
 
-### Gamer's Grotto
+### Gamers Grotto
 
 ![Gamer's Grotto](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/public/minimilitia/assets/Gamers%20Grotto.JPG)
 
