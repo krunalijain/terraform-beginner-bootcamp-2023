@@ -4,9 +4,9 @@
 
 
 ## Weekly Jounals
-- [week0]([https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/20-create-toc-readme/journal/week0.md](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week0.md))
-- [week1]([https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/20-create-toc-readme/journal/week1.md](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week1.md))
-- [week2]([https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week2.md](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week2.md)https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week2.md)
+- [week0](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week0.md)
+- [week1](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week1.md)
+- [week2](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/journal/week2.md)
 
 ## Extras
 - [GitHub TOC Generator](https://ecotrust-canada.github.io/markdown-toc/)
