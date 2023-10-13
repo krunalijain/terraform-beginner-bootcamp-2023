@@ -61,3 +61,17 @@ Terraform Provider resources utilize CRUD.
 CRUD stands for Create, Read Update, and Delete
 
 https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+
+## End Results of Two Towns
+
+### Gamer's Grotto
+
+![Gamer's Grotto](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/public/minimilitia/assets/Gamers%20Grotto.JPG)
+
+![minimilitia](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/public/minimilitia/assets/minimiltia.JPG)
+
+### Cooker Cove
+
+![Cooker Cove](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/public/suttarphini/assets/Cooker%20Cove.JPG)
+
+![Suttarphini](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/public/suttarphini/assets/suttarphini.JPG)
