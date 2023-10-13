@@ -1,5 +1,6 @@
 # Terraform Beginner Bootcamp 2023 - Week 0 
 
+## TOC - Table Of Contents
 - [Semantic Versioning](#semantic-versioning)
 - [Install the Terraform CLI](#install-the-terraform-cli)
   * [Considerations with the Terraform CLI changes](#considerations-with-the-terraform-cli-changes)
