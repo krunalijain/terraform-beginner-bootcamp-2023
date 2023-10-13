@@ -46,7 +46,7 @@ With simple controls and the ability to connect with friends for multiplayer mat
 Mini Militia has garnered a large and dedicated fan base, offering hours of entertaining gaming experiences.
 DESCRIPTION
   domain_name = module.home_minimilitia_hosting.domain_name
-  town = "missingo"
+  town = "gamers-grotto"
   content_version = var.minimilitia.content_version
 }
 
@@ -67,6 +67,6 @@ Its long shelf life makes it an ideal gift for special occasions,
 and it serves as a symbol of regional pride and cultural heritage, enhancing celebrations across the state.
 DESCRIPTION
   domain_name = module.home_suttarphini_hosting.domain_name
-  town = "missingo"
+  town = "cooker-cove"
   content_version = var.suttarphini.content_version
 }
