@@ -1,5 +1,6 @@
 # Terraform Beginner Bootcamp 2023 - Week 1
 
+## TOC - Table of COntents
 - [Terraform Beginner Bootcamp 2023 - Week 1](#terraform-beginner-bootcamp-2023---week-1)
   * [Fixing Tags](#fixing-tags)
   * [Root Module Structure](#root-module-structure)
