@@ -13,12 +13,12 @@ terraform {
   #    name = "terra-house-1"
   #  }
   #}
-  #cloud {
-  #  organization = "TF-Bootcamp-2023"
-  #  workspaces {
-  #    name = "terra-house-1"
-  #  }
-  #}
+  cloud {
+    organization = "TF-Bootcamp-2023"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
 
 }
 
