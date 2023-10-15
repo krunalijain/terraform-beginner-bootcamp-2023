@@ -1,5 +1,47 @@
 # Terraform Beginner Bootcamp 2023 - Week 1
 
+## TOC - Table of COntents
+- [Terraform Beginner Bootcamp 2023 - Week 1](#terraform-beginner-bootcamp-2023---week-1)
+  * [Fixing Tags](#fixing-tags)
+  * [Root Module Structure](#root-module-structure)
+  * [Terraform and Input Variables](#terraform-and-input-variables)
+    + [Terraform Cloud Variables](#terraform-cloud-variables)
+    + [Loading Terraform Input Variables](#loading-terraform-input-variables)
+    + [var flag](#var-flag)
+    + [var-file flag](#var-file-flag)
+    + [terraform.tvfars](#terraformtvfars)
+    + [auto.tfvars](#autotfvars)
+    + [order of terraform variables](#order-of-terraform-variables)
+  * [Dealing With Configuration Drift](#dealing-with-configuration-drift)
+  * [What happens if we lose our state file?](#what-happens-if-we-lose-our-state-file-)
+    + [Fix Missing Resources with Terraform Import](#fix-missing-resources-with-terraform-import)
+    + [Fix Manual Configuration](#fix-manual-configuration)
+  * [Fix using Terraform Refresh](#fix-using-terraform-refresh)
+  * [Terraform Modules](#terraform-modules)
+    + [Terraform Module Structure](#terraform-module-structure)
+    + [Passing Input Variables](#passing-input-variables)
+    + [Modules Sources](#modules-sources)
+  * [Considerations when using ChatGPT to write Terraform](#considerations-when-using-chatgpt-to-write-terraform)
+  * [Working with Files in Terraform](#working-with-files-in-terraform)
+    + [Fileexists function](#fileexists-function)
+    + [Filemd5](#filemd5)
+    + [Path Variable](#path-variable)
+  * [Terraform Locals](#terraform-locals)
+  * [Terraform Data Sources](#terraform-data-sources)
+  * [Working with JSON](#working-with-json)
+    + [Changing the Lifecycle of Resources](#changing-the-lifecycle-of-resources)
+  * [Terraform Data](#terraform-data)
+  * [Provisioners](#provisioners)
+    + [Local-exec](#local-exec)
+    + [Remote-exec](#remote-exec)
+  * [For Each Expressions](#for-each-expressions)
+  * [ETag](#etag)
+  * [ETag Vs Lifecycle](#etag-vs-lifecycle)
+  * [Snapshots of this week](#snapshots-of-this-week)
+    + [1.4.0 in S3 uploaded error and index file](#140-in-s3-uploaded-error-and-index-file)
+    + [1.6.0 part 2 applied changed version](#160-part-2-applied-changed-version)
+    + [1.8.0 result index.html page with img](#180-result-indexhtml-page-with-img)
+
 ## Fixing Tags
 
 [How to Delete Local and Remote Tags on Git](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
@@ -282,3 +324,30 @@ For each allows us to enumerate over complex data types
 This is mostly useful when you are creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code.
 
 [For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
+
+## ETag 
+
+We use ETag when we want the TF to adapt any content change in any file. 
+For eg: When we don't use ETag - we changed some content of file and re-applied but it didn't take any new changes.
+When we use ETag - It will notice any content changed is there or not and will adapt that as well.
+			
+In Short: If the content changes then the ETag will change. ETag is unique
+We generate ETag by using `filemd5` (it's a function, a cryptographic algorithm which turns the contents of the file into an ETag)
+
+## ETag Vs Lifecycle
+
+As I understand it...the etag tells terraform IF the file has changed (as the hash will be different), the lifecycle tells terraform WHAT to do WHEN the file is changed. We moved away from relying strictly on the etag just so it wouldn't trigger a refresh everytime we changed that file. We moved that functionality to the version number so we could manually control when a refresh occurred.
+
+## Snapshots of this week
+
+### 1.4.0 in S3 uploaded error and index file
+
+![](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/assets/1.4.0%20in%20S3%20uploaded%20error%20and%20index%20file.png)
+
+### 1.6.0 part 2 applied changed version
+
+![](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/assets/1.6.0%20part%202%20applied%20changed%20version.JPG)
+
+### 1.8.0 result index.html page with img
+
+![](https://github.com/krunalijain/terraform-beginner-bootcamp-2023/blob/main/assets/1.8.0%20result%20index.html%20page%20with%20img.JPG)
